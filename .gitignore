@@ -1,0 +1,6 @@
+wp-content/uploads/*
+wp-config.php
+wp-config.production.php
+.htaccess
+.access.txt
+*.md
