@@ -5,7 +5,8 @@
   ================================================== -->
 <div class="container clearfix">
     <div class="pagename sixteen columns fadeInUp animated">
-        <h3>
+        <!-- 
+<h3>
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
              <?php global $post; $categories = get_the_category($post->ID); echo $categories[0]->cat_name; ?>
                 <span><?php  echo $categories[0]->category_description ?></span>
@@ -15,6 +16,7 @@
 			
 			endwhile; endif;?>
         </h3>
+ -->
     </div>
 </div>
 
@@ -25,7 +27,8 @@
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         <div class="blogpost">
         <div class="clear"></div> <!-- for stupid ie7 -->
-            <div class="one_sixth fulldetails"> 
+           <!-- 
+ <div class="one_sixth fulldetails"> 
             
             	<span class="darkbubble date">
                     <h3>
@@ -54,16 +57,19 @@
                 </p>
                 
             </div>
+ -->
             <div class="five_sixth column-last">
                 <h3 class="blogtitle"> <a href="<?php the_permalink(); ?>" title="<?php printf(__('Permanent Link to %s', 'framework'), get_the_title()); ?>">
                     <?php the_title(); ?>
                     </a> </h3>
-                    <div class="mobiledetails">
+                    <!-- 
+<div class="mobiledetails">
                      <p><?php _e('On ', 'framework'); the_time('d'); ?>, <?php the_time('M'); ?>  <?php the_time('Y'); ?> | <a href=" <?php comments_link(); ?> ">
                    		 <?php comments_number( __('No Comments', 'framework'), __('One Comment', 'framework'), __('% Comments', 'framework') ); ?>
                     </a> |  <?php _e('In ', 'framework'); the_category(', '); ?> | <?php _e('By ', 'framework'); the_author_link(); ?>
                     </p> 
                     </div>
+ -->
                 <div class="featuredimage">
                     <?php /* if the post has a WP 2.9+ Thumbnail */
 					if ( (function_exists('has_post_thumbnail')) && (has_post_thumbnail()) ) : ?>
@@ -125,8 +131,8 @@
             <?php endif; else: paginate_links(); wp_link_pages('before=<p>&after=</p>&next_or_number=number&pagelink=page %');  endif;?>
 </div>
     <div class="four columns sidebar offset-by-one content">
-        <?php	/* Widget Area */	if ( !function_exists( 'dynamic_sidebar' ) || !dynamic_sidebar('Blog Sidebar') ) ?>
-    </div>
+        <h4 style="color:#ccc; font-weight:100; line-height:30px;">SEE ALSO:</h4>
+        <?php	/* Widget Area */	if ( !function_exists( 'dynamic_sidebar' ) || !dynamic_sidebar('Blog Sidebar') ) ?>    </div>
     <div class="clear"></div>
 </div>
 <?php get_footer(); ?>

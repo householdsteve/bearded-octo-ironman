@@ -1421,7 +1421,7 @@ p.loading {
 /*-----------------------------------------------------------------------------------*/
 
 .widget {
-	margin-bottom:50px;
+	margin-bottom:30px;
 }
 .widget a {
 	text-decoration:none;
@@ -1505,6 +1505,9 @@ ul#twitter_update_list li {
 	text-transform: none;
 	line-height: 16px;
 	margin-bottom: 10px;
+	text-transform: uppercase;
+	max-width: 153px;
+	float: right;
 }
 .news-widget-item {
 	margin-bottom:40px;

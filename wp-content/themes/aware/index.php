@@ -4,10 +4,13 @@
   ================================================== -->
 <div class="container clearfix">
     <div class="pagename sixteen columns fadeInUp animated">
+<!-- 
         <h3>
             <?php wp_title("",true);
 			if(!wp_title("",false)) { echo bloginfo( 'description');} ?>
         </h3>
+ -->
+
     </div>
 </div>
 <div class="clear"></div>
@@ -15,7 +18,7 @@
 <!-- Page Content
   ================================================== -->
 <div class="container clearfix fadeInUp animated">
-    <div class="eleven columns blogwrap">
+    <div class="sixteen columns blogwrap">
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         <div class="blogpost">
         <div class="clear"></div> <!-- for stupid ie7 -->
@@ -67,7 +70,7 @@
                     <?php /* if the post has a WP 2.9+ Thumbnail */
 					if ( (function_exists('has_post_thumbnail')) && (has_post_thumbnail()) ) : ?>
                     <a title="<?php printf(__('Permanent Link to %s', 'framework'), get_the_title()); ?>" href="<?php the_permalink(); ?>">
-                    <?php the_post_thumbnail('blog', array('class' => 'scale-with-grid')); /* post thumbnail settings configured in functions.php */ ?>
+                    <!-- <?php the_post_thumbnail('blog', array('class' => 'scale-with-grid')); /* post thumbnail settings configured in functions.php */ ?> -->
                     </a>
                     <?php endif; ?>
                 </div>

@@ -358,7 +358,7 @@ if ( function_exists( 'add_theme_support' ) ) {
 	add_image_size( 'portfoliowidget', 56, 56, true ); // Portfolio widget thumbnail
 	add_image_size( 'portfoliosmall', 301, 251, true ); // Portfolio Small thumbnail
 	add_image_size( 'blogsmall', 420, 246, true ); // Portfolio Small thumbnail
-	add_image_size( 'portfoliolarge', 640, 350, true ); // Portfolio Large thumbnail
+	add_image_size( 'portfoliolarge', 960, 350, true ); // Portfolio Large thumbnail
 }
 
 if (class_exists('MultiPostThumbnails')) { 

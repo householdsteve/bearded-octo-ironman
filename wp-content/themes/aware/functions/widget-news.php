@@ -62,11 +62,19 @@ if ( $title ) echo '
     while ($the_query->have_posts()) : $the_query->the_post();?>
 <div class="news-widget-item">
         <h4 class="posttitle"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4><!--Post Title-->
-        <h5><a href="<?php the_permalink(); ?>"><?php the_time('jS F Y') ?></a> by <a href="<?php the_permalink(); ?>"><?php the_author(); ?></a></h5><!--Misc Info-->
+<!--         <h5><a href="<?php the_permalink(); ?>"><?php the_time('jS F Y') ?></a> by <a href="<?php the_permalink(); ?>"><?php the_author(); ?></a></h5> --><!--Misc Info-->
+
+       <?php the_post_thumbnail('portfoliowidget', array('class' => 'scale-with-grid')); ?>
+        
         <?php 
+        
 global $more;    // Declare global $more (before the loop).
 $more = 0;       // Set (inside the loop) to display content above the more tag.
-the_content("Read More...", 'framework');
+$content = get_the_content();
+//$content = apply_filters('the_content', $content);
+//$content = str_replace(']]>', ']]&gt;', $content);
+//echo $content;
+//the_content(TRUE);
 ?>
 </div>
 
@@ -74,7 +82,7 @@ the_content("Read More...", 'framework');
 
 <?php
 		/* After widget (defined by themes). */
-		echo $after_widget;
+		// echo $after_widget;
 	}
 
 /*----------------------------------------------------------*/
