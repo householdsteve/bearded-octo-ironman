@@ -164,7 +164,7 @@ Template Name: Homepage
             </a>
             <?php endif; ?>
         </div>
-        <h4 class="posttitle"><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s', 'framework'), get_the_title()); ?>">
+        <h4 class="posttitlee"><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s', 'framework'), get_the_title()); ?>">
             <?php the_title(); ?>
             </a></h4>
             <!-- <h5><a href="<?php the_permalink(); ?>"><?php the_time('jS F Y') ?></a> by <a href="<?php the_permalink(); ?>"><?php the_author(); ?></a></h5> --><!--Misc Info-->

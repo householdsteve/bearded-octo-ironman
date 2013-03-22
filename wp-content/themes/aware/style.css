@@ -1508,7 +1508,19 @@ ul#twitter_update_list li {
 	text-transform: uppercase;
 	max-width: 153px;
 	float: right;
+ }
+ 
+.posttitlee {
+	font-size: 11px !important;
+	font-weight: bold !important;
+	letter-spacing: normal;
+	line-height: 16px;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+	max-width: 240px;
+	float: none;
 }
+
 .news-widget-item {
 	margin-bottom:40px;
 }
