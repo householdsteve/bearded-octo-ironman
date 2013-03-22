@@ -131,8 +131,14 @@
             <?php endif; else: paginate_links(); wp_link_pages('before=<p>&after=</p>&next_or_number=number&pagelink=page %');  endif;?>
 </div>
     <div class="four columns sidebar offset-by-one content">
-        <h4 style="color:#ccc; font-weight:100; line-height:30px;">SEE ALSO:</h4>
+        <h4 style="font-weight:100; line-height:30px;">SEE ALSO:</h4>
         <?php	/* Widget Area */	if ( !function_exists( 'dynamic_sidebar' ) || !dynamic_sidebar('Blog Sidebar') ) ?>    </div>
     <div class="clear"></div>
 </div>
+
+		<div id="download" style="padding-top: 30px;border-top-width: 1px;border-top-style: dotted;">
+			<h4 style="font-weight:100; line-height:30px;">DISCOVER MORE:</h4>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text.</p>
+			<p> <a href="#" class="more-link">Download PdF</a></p>
+		</div>
 <?php get_footer(); ?>
